@@ -1,6 +1,6 @@
 # TimesheetApp
 
-The backend is implemented using Java Spring Boot, the frontend is built with Angular[version 18.1.0.[, and PostgreSQL is used as the database.
+The backend is implemented using Java Spring Boot(timesheet11 file), the frontend is built with Angular[version 18.1.0.[, and PostgreSQL is used as the database.
 
 The application has two types of users: regular users and admins.  
 - Regular users can enter timesheets, search their entries, and export them (reporting).  
