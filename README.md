@@ -1,27 +1,46 @@
 # TimesheetApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.0.
+The backend is implemented using Java Spring Boot, the frontend is built with Angular[version 18.1.0.[, and PostgreSQL is used as the database.
 
-## Development server
+The application has two types of users: regular users and admins.  
+- Regular users can enter timesheets, search their entries, and export them (reporting).  
+- Admin users can search for all users and export their data.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+1. User Registration and Login Page**
+- Registration Page**:
+  - Includes fields for username, email, and password.
+  - The email and username must be unique when registering.
+  - The password must be at least 8 characters long and contain one uppercase letter, one lowercase letter, and one special character.
+- Login Page**:
+  - Includes fields for username and password.
+  - Upon login, the user's identity and roles are verified.
+  - After a successful login, the user is redirected to the Timesheet entry page.
 
-## Code scaffolding
+2. Timesheet Application**
+- New Timesheet Entry:
+  - The user can input fields such as date, start time, end time, and description.
+- After logging in, the user will be able to enter a new timesheet.  
+   
+**Timesheet Search and Listing**:
+- Users can search their past timesheet entries based on a date range.
+- The search results will be displayed in a table format.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+**Timesheet Update**:
+- Users will be able to update previously entered timesheets after searching for them.
 
-## Build
+**Timesheet Export**:
+- Users can export their search results in CSV or Excel format.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+3. **Admin Panel**
+   
+**User Search and Listing**:
+- Admins can search for and list all users and their timesheet entries.
+- Search criteria include fields such as username, email, and registration date.
+- Admins can perform searches using any of these criteria.
 
-## Running unit tests
+**Timesheet Export**:  
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
